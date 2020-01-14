@@ -4,14 +4,14 @@ import routes from './routes';
 
 class App {
   constructor() {
-    this.server = express;
+    this.server = express();
 
     this.middlewares();
     this.routes();
   }
 
   middlewares() {
-    this.server.request(express.json());
+    this.server.use(express.json());
   }
 
   routes() {
