@@ -1,3 +1,3 @@
 export default {
-  dsn: process.ENV.SENTRY_DSN,
+  dsn: process.env.SENTRY_DSN,
 };
