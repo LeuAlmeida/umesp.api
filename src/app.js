@@ -1,4 +1,4 @@
-import express from 'express'
+import express from 'express';
 
 import routes from './routes';
 
@@ -12,14 +12,6 @@ class App {
 
   middlewares() {
     this.server.request(express.json());
-    this.server.use((req, res, next) => {
-      res.header('Access-Control-Allow-Origin', '*');
-      res.header(
-        'Access-Control-Allow-Headers',
-        'Origin, X-Requested-With, Content-Type, Accept'
-      );
-      next();
-    });
   }
 
   routes() {
